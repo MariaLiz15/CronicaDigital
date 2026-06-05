@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Libro | Crónica Digital</title>
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <script defer src="../assets/app.js"></script>
+</head>
+<body data-book-id="uso-irresponsable-ia">
+  <header class="site-header">
+    <a class="logo" href="../index.html">Crónica Digital</a>
+    <button class="menu-btn" aria-label="Abrir menú">☰</button>
+    <nav class="nav">
+      <a href="../index.html">Inicio</a>
+      <a href="../index.html#coleccion">La colección</a>
+      <a href="#descarga">Descarga</a>
+      <a href="#trivia">Trivia</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="section book-hero reveal">
+      <img id="bookCover" alt="Portada del libro" />
+      <div>
+        <span class="tag">Micrositio individual</span>
+        <h1 id="bookTitle"></h1>
+        <p id="bookSynopsis"></p>
+        <div class="meta">
+          <div><strong>Autor:</strong> <span id="bookAuthor"></span></div>
+          <div><strong>Tema abordado:</strong> <span id="bookTopic"></span></div>
+          <div><strong>Problemática digital:</strong> <span id="bookProblem"></span></div>
+        </div>
+        <a id="downloadPdf" class="btn primary" download>Descargar PDF</a>
+        <a class="btn secondary" href="../index.html#coleccion">Volver a la librera</a>
+      </div>
+    </section>
+
+    <section class="section resources" id="descarga">
+      <div class="content-grid">
+        <div class="panel reveal">
+          <h2>Flipbook interactivo</h2>
+          <div class="flipbook" id="flipbookPages"></div>
+          <button class="btn small" onclick="nextFlipPage()">Pasar página</button>
+        </div>
+        <div class="panel reveal">
+          <h2>Vista previa online</h2>
+          <object id="pdfPreview" type="application/pdf"><p>Tu navegador no puede mostrar PDF. Usa el botón de descarga.</p></object>
+        </div>
+      </div>
+    </section>
+
+    <section class="section resources" id="trivia">
+      <div class="content-grid">
+        <div class="panel reveal">
+          <h2>Audio narrativo</h2>
+          <p>Recurso sugerido: puedes agregar aquí un archivo MP3 de narración del libro.</p>
+          <audio controls><source src="" type="audio/mpeg">Tu navegador no soporta audio.</audio>
+        </div>
+        <div class="panel trivia reveal">
+          <h2>Trivia reflexiva</h2>
+          <p id="triviaQuestion"></p>
+          <div id="triviaOptions"></div>
+          <p id="triviaResult" class="form-msg"></p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Crónica Digital · Experiencia interactiva de lectura</p>
+  </footer>
+</body>
+</html>
